@@ -1,25 +1,37 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from "react";
+import { Route, Switch } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import Rentals from "./components/Rentals";
+import Search from "./components/Search";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    // useEffect(() => 
+    //     fetch("baseURL")
+    //     .then((r) => r.json)
+    //     .then((games) => console.log(games))    
+    // )
+
+    return (
+        <div>
+        <NavBar />
+        <Switch>
+            <Route exact path="/">
+                <Home />
+            </Route>
+            <Route path="/rentals">
+                <Rentals />
+            </Route>
+            <Route path="/Search">
+                <Search />
+            </Route>
+        </Switch>
     </div>
-  );
+    )
 }
+
 
 export default App;
