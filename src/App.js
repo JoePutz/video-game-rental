@@ -69,14 +69,6 @@ function App() {
         //setBooksToDisplay(toPush);
         console.log(toPush)
       }
-        .then(booksData => {
-            booksData.results.forEach(book => {
-                allBooks.push(book)
-            });
-            // console.log(allBooks)
-            //if(booksData.next !== null){
-                //flipPages(booksData.next)}
-    })}
 
     return (
         <div>
