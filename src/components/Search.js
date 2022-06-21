@@ -6,7 +6,7 @@ function Search({ handleSearch }) {
     <div>
       <h1>Search Page</h1>
       <form onSubmit={(e) => handleSearch(e)}>
-        <input onChange = {(e) => handleSearch(e)}></input>
+        <input onChange={(e) => handleSearch(e)}>Check-out Book</input>
       </form>
     </div>
   );

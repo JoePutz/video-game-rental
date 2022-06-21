@@ -1,11 +1,93 @@
 {
-    "checkedOutBooks": [
-      {
-        "id": 1,
-        "name": "Woody",
-        "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-        "likes": 8
-      }
-    ]
-  }
-  
+  "books": [
+    {
+      "id": 55,
+      "title": "The Wonderful Wizard of Oz",
+      "authors": [
+        {
+          "name": "Baum, L. Frank (Lyman Frank)",
+          "birth_year": 1856,
+          "death_year": 1919
+        }
+      ],
+      "translators": [],
+      "subjects": [
+        "Courage -- Juvenile fiction",
+        "Cowardly Lion (Fictitious character) -- Juvenile fiction",
+        "Cyclones -- Juvenile fiction",
+        "Dreams -- Juvenile fiction",
+        "Fantasy literature",
+        "Gale, Dorothy (Fictitious character) -- Juvenile fiction",
+        "Good and evil -- Juvenile fiction",
+        "Home -- Juvenile fiction",
+        "Oz (Imaginary place) -- Juvenile fiction",
+        "Scarecrow (Fictitious character from Baum) -- Juvenile fiction",
+        "Tin Woodman (Fictitious character) -- Juvenile fiction",
+        "Toto (Fictitious character) -- Juvenile fiction",
+        "Witches -- Juvenile fiction",
+        "Wizard of Oz (Fictitious character) -- Juvenile fiction"
+      ],
+      "bookshelves": [
+        "Children's Literature",
+        "Fantasy"
+      ],
+      "languages": [
+        "en"
+      ],
+      "copyright": false,
+      "media_type": "Text",
+      "formats": {
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/55.epub.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/55.rdf",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/55.kindle.images",
+        "text/plain; charset=utf-8": "https://www.gutenberg.org/files/55/55-0.txt",
+        "text/html; charset=utf-8": "https://www.gutenberg.org/files/55/55-h/55-h.htm",
+        "text/html": "https://www.gutenberg.org/ebooks/55.html.images",
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/55/pg55.cover.small.jpg"
+      },
+      "download_count": 9227
+    },
+    {
+      "id": 174,
+      "title": "The Picture of Dorian Gray",
+      "authors": [
+        {
+          "name": "Wilde, Oscar",
+          "birth_year": 1854,
+          "death_year": 1900
+        }
+      ],
+      "translators": [],
+      "subjects": [
+        "Appearance (Philosophy) -- Fiction",
+        "Conduct of life -- Fiction",
+        "Didactic fiction",
+        "Great Britain -- History -- Victoria, 1837-1901 -- Fiction",
+        "London (England) -- History -- 1800-1950 -- Fiction",
+        "Paranormal fiction",
+        "Portraits -- Fiction",
+        "Supernatural -- Fiction"
+      ],
+      "bookshelves": [
+        "Gothic Fiction",
+        "Movie Books"
+      ],
+      "languages": [
+        "en"
+      ],
+      "copyright": false,
+      "media_type": "Text",
+      "formats": {
+        "text/html": "https://www.gutenberg.org/ebooks/174.html.images",
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/174.epub.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/174.rdf",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/174.kindle.images",
+        "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/174/174-0.txt",
+        "application/zip": "https://www.gutenberg.org/files/174/174-h.zip",
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/174/pg174.cover.medium.jpg",
+        "text/plain": "https://www.gutenberg.org/ebooks/174.txt.utf-8"
+      },
+      "download_count": 19203
+    }
+  ]
+}
