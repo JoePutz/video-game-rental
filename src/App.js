@@ -17,7 +17,7 @@ function App() {
     async function flipPages(booksURL){
         await fetch(booksURL)
         .then(r => r.json())
-        .then(booksData => {console.log(booksData.results)
+        .then(booksData => {
             setAllBooks(booksData.results)})
             //{booksData.results.forEach(book => setAllBooks([...allBooks, book]))
         //     debugger})
@@ -67,7 +67,7 @@ function App() {
             toPush.push(t)
           }})
         //setBooksToDisplay(toPush);
-        console.log(toPush)
+        //console.log(toPush)
       }
 
     return (
@@ -75,7 +75,7 @@ function App() {
         <NavBar />
         <Switch>
             <Route exact path="/">
-                <Home allBooks = {allBooks} />
+                <Home bookstoDisplay = {booksToDisplay} allBooks={allBooks} />
             </Route>
             <Route path="/rentals">
                 <Rentals />
