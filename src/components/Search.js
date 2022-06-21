@@ -1,9 +1,13 @@
 import React from "react";
 
-function Search() {
+function Search({ searchGame }) {
+  function handleSubmit() {}
   return (
     <div>
       <h1>Search Page</h1>
+      <form onSubmit={handleSubmit}>
+        <input>Name of Game</input>
+      </form>
     </div>
   );
 }
