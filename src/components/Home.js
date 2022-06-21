@@ -1,4 +1,5 @@
 import React from "react";
+import BookCard from "./BookCard"
 
 function Home({ getDetails, games }) {
   return (
