@@ -20,7 +20,7 @@ function App() {
             booksData.results.forEach(book => {
                 allBooks.push(book)
             });
-            console.log(allBooks)
+            // console.log(allBooks)
             //if(booksData.next !== null){
                 //flipPages(booksData.next)}
     })}
@@ -30,7 +30,7 @@ function App() {
         <NavBar />
         <Switch>
             <Route exact path="/">
-                <Home />
+                <Home allBooks = {allBooks} />
             </Route>
             <Route path="/rentals">
                 <Rentals />
