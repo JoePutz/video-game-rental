@@ -17,8 +17,7 @@ function App() {
     async function flipPages(booksURL){
         await fetch(booksURL)
         .then(r => r.json())
-        .then(booksData => {console.log(booksData.results)
-            setAllBooks(booksData.results)})
+        .then(booksData => setAllBooks(booksData.results))
             //{booksData.results.forEach(book => setAllBooks([...allBooks, book]))
         //     debugger})
         // if(booksData.next !== null){
@@ -33,7 +32,7 @@ function App() {
         for (let book of allBooks){
             if(e.target.value.toUpperCase() === book.title.substring(0, e.target.value.length).toUpperCase())
             {tempTitleArr.push(book)}        
-    }
+        }
         let tempAuthorArr = [];
         for (let book of allBooks){
             for (let author of book.authors){
@@ -42,32 +41,29 @@ function App() {
                    {tempAuthorArr.push(book) }
             }
         }
-
         let tempSubjectArr = [];
-        for (let book of allBooks){
-            for (let subject in book.subjects){
-                if (subject.toUpperCase().includes(e.target.value.toUpperCase()))
-                   { tempAuthorArr.push(book) }
-            }
-        }
+        // for (let book of allBooks){
+        //     for (let subject in book.subjects){
+        //         if (subject.toUpperCase().includes(e.target.value.toUpperCase()))
+        //            { tempAuthorArr.push(book) }
+        //     }
+        // }
 
         let tempBookShelfArr = [];
-        for (let book of allBooks){
-            for (let shelf in book.bookshelves){
-                if (shelf.substring(0, e.target.value.length).toUpperCase() === e.target.value.toUpperCase())
-                   { tempAuthorArr.push(book) }
-            }
-        }
+        // for (let book of allBooks){
+        //     for (let shelf in book.bookshelves){
+        //         if (shelf.substring(0, e.target.value.length).toUpperCase() === e.target.value.toUpperCase())
+        //            { tempAuthorArr.push(book) }
+        //     }
+        // }
         
-        let tempTotalArr = [...tempTitleArr, ...tempAuthorArr, ...tempBookShelfArr, ...tempSubjectArr];
-        //console.log(tempTotalArr)
+        let tempTotalArr = [...tempTitleArr, ...tempAuthorArr];
         let toPush=[];
         tempTotalArr.forEach((t) => {
           if(!toPush.includes(t)) {
             toPush.push(t)
           }})
-        //setBooksToDisplay(toPush);
-        console.log(toPush)
+        setBooksToDisplay(toPush);
       }
 
     return (
@@ -81,7 +77,7 @@ function App() {
                 <Rentals />
             </Route>
             <Route path="/Search">
-                <Search handleSearch = {handleSearch} />
+                <Search handleSearch = {handleSearch} booksToDisplay = {booksToDisplay}/>
             </Route>
         </Switch>
     </div>
