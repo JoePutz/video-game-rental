@@ -1,5 +1,5 @@
 import React from "react";
-import BookCard from "./BookCard"
+import BookCard from "./BookCard";
 
 // function Home({ getDetails, allBooks }) {
 function Home({ allBooks }) {
@@ -13,12 +13,14 @@ function Home({ allBooks }) {
   return (
     <div>
       <h1>Featured Books!</h1>
+
       <BookCard book={shuffledBooks[0]}/>
       <BookCard book={shuffledBooks[1]}/>
       <BookCard book={shuffledBooks[2]}/>
       <BookCard book={shuffledBooks[3]}/>
       <BookCard book={shuffledBooks[4]}/>
       {/* <BookCard book={allBooks[0]} /> */}
+
       {/* going to need a formula for top 5 or 5 random or something, 
       but for each should get <VideoGameCard game={game} getDetails={getDetails}/> */}
     </div>
