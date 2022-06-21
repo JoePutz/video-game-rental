@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import NavBar from "./NavBar";
+import React from "react";
+import BookCard from "./BookCard"
 
 function Home({ getDetails, games }) {
   return (
