@@ -8,25 +8,31 @@ import Rentals from "./components/Rentals";
 import Search from "./components/Search";
 
 function App() {
-    const baseURL = "https://gutendex.com/books"
+    const baseURL = "https://gutendex.com/books?page="
+    const ashleyURL = "http://localhost:3000/books";
     const [allBooks, setAllBooks] = useState([]);
-    const [booksToDisplay, setBooksToDisplay] = useState([]);
     const [addOneBookToCart, setAddOneBookToCart] = useState([]);
     const [refresh, setRefresh] = useState(true);
     const [displayCart, setDisplayCart] = useState([]);
+    useEffect(() => {
+      let count = 1;
+      while (count<=50){flipPages(`${baseURL}${count}`)
+      count++;
+    }
+    //setTimeout(console.log(allBooks), 5000);
+  }, [])
 
-    useEffect(() => {flipPages(baseURL)}, [])
     async function flipPages(booksURL){
         await fetch(booksURL)
         .then(r => r.json())
-        .then(booksData => {
-        setAllBooks(booksData.results)})
-        setBooksToDisplay(allBooks);
+        .then(booksData => { 
+        setAllBooks([...allBooks, ...booksData.results])})
     }
 
      //add to Cart callback function
     function addToCart(book) {
-      fetch(`http://localhost:3000/books`, {
+      book.rentalTime = Date();
+      fetch(ashleyURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,16 +45,15 @@ function App() {
 
     // remove from cart callback function
     function removeFromCart(bookId) {
-      console.log("removeFromCart", bookId);
-      fetch(`http://localhost:3000/books/${bookId}`, {
+      //console.log("removeFromCart", bookId);
+      fetch(`${ashleyURL}/${bookId}`, {
         method: "DELETE",
       }).then(
-        fetch("http://localhost:3000/books")
+        fetch(ashleyURL)
           .then((response) => response.json())
           .then((data) => setRefresh(!refresh))
       );
     }
-
   
     return (
         <div>
@@ -78,6 +83,5 @@ function App() {
     </div>
     )
 }
-
 
 export default App;

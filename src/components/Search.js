@@ -31,9 +31,9 @@ function Search({allBooks}) {
     let totalSearchFilter = [...searchFilterTitle(t), ...searchFilterAuthor(a), ...searchFilterBookShelf(b), ...searchFilterSubject(s)]
     //console.log(totalSearchFilter);
     let toPush=[];
-      totalSearchFilter.forEach((t) => {
-        if(!toPush.includes(t) && t!==[]) {
-          toPush.push(t)
+      totalSearchFilter.forEach((x) => {
+        if(!toPush.includes(x) && x!==[]) {
+          toPush.push(x)
         }})
     setBooksToDisplay(toPush);
   }
