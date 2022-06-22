@@ -17,7 +17,9 @@ function App() {
     async function flipPages(booksURL){
         await fetch(booksURL)
         .then(r => r.json())
-        .then(booksData => setAllBooks(booksData.results))
+        .then(booksData => {
+            setAllBooks(booksData.results)})
+
             //{booksData.results.forEach(book => setAllBooks([...allBooks, book]))
         //     debugger})
         // if(booksData.next !== null){
@@ -26,12 +28,56 @@ function App() {
         setBooksToDisplay(allBooks);
     }
 
+    function handleSearch(e) {
+        e.preventDefault();
+        let tempTitleArr =[]
+        for (let book of allBooks){
+            if(e.target.value.toUpperCase() === book.title.substring(0, e.target.value.length).toUpperCase())
+            {tempTitleArr.push(book)}        
+    }
+        let tempAuthorArr = [];
+        for (let book of allBooks){
+            for (let author of book.authors){
+                if(author.name === undefined){}
+                else if (author.name.toUpperCase().includes(e.target.value.toUpperCase()))
+                   {tempAuthorArr.push(book) }
+            }
+        }
+
+        let tempSubjectArr = [];
+        for (let book of allBooks){
+            for (let subject in book.subjects){
+                if (subject.toUpperCase().includes(e.target.value.toUpperCase()))
+                   { tempAuthorArr.push(book) }
+            }
+        }
+
+        let tempBookShelfArr = [];
+        for (let book of allBooks){
+            for (let shelf in book.bookshelves){
+                if (shelf.substring(0, e.target.value.length).toUpperCase() === e.target.value.toUpperCase())
+                   { tempAuthorArr.push(book) }
+            }
+        }
+        
+        let tempTotalArr = [...tempTitleArr, ...tempAuthorArr, ...tempBookShelfArr, ...tempSubjectArr];
+        //console.log(tempTotalArr)
+        let toPush=[];
+        tempTotalArr.forEach((t) => {
+          if(!toPush.includes(t)) {
+            toPush.push(t)
+          }})
+        //setBooksToDisplay(toPush);
+        //console.log(toPush)
+      }
+
+  
     return (
         <div>
         <NavBar />
         <Switch>
             <Route exact path="/">
-                <Home allBooks = {allBooks} />
+                <Home bookstoDisplay = {booksToDisplay} allBooks={allBooks} />
             </Route>
             <Route path="/rentals">
                 <Rentals />
