@@ -20,14 +20,17 @@ function Rentals({
     <div className="flexbox-container">
       <h1>Checked Out Books Page</h1>
       {displayCart.map((book) => {
+        if(Date.parse(Date()) - Date.parse(book.rentalTime) < 10000 || book.rentalTime === undefined){
         return (
           <BookCard
             book={book}
             setAddOneBookToCart={setAddOneBookToCart}
             removeFromCart={removeFromCart}
-            addToCart={addToCart}
+            //addToCart={addToCart}
+            key = {book.id}
           />
-        );
+        )}
+        else {removeFromCart(book.id)}
       })}
     </div>
   );
