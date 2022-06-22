@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Rentals from "./components/Rentals";
 import Search from "./components/Search";
+import LowerBanner from "./components/LowerBanner";
 
 function App() {
     const baseURL = "https://gutendex.com/books"
@@ -72,9 +73,15 @@ function App() {
                 />
             </Route>
             <Route path="/Search">
-                <Search allBooks = {allBooks}/>
+                <Search allBooks = {allBooks}
+                setAddOneBookToCart={setAddOneBookToCart}
+                addToCart={addToCart}
+                removeFromCart={removeFromCart}
+                />
             </Route>
         </Switch>
+        <div id="lowerbanner"></div>
+        <LowerBanner />
     </div>
     )
 }

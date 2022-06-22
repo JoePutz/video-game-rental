@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import BookCard from "./BookCard";
 
-function Search({allBooks}) {
+function Search({allBooks, setAddOneBookToCart, addToCart, removeFromCart}) {
   
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -108,7 +108,7 @@ function Search({allBooks}) {
 }
 
   return (
-    <div>
+    <div className="flexbox-container">
       <h1>Search Page</h1>
       <form onSubmit={(e) => handleSearch(e,title,author,bookshelf,subject)}>
         <input onChange = {(e) => handleTitleChange(e)} className = "title" value = {(title === "" ? "" : title)} placeholder = "Search by title"/>
@@ -117,7 +117,9 @@ function Search({allBooks}) {
         <input onChange = {(e) => handleSubjectChange(e)} className = "subject" value = {(subject === "" ? "" : subject)} placeholder = "Search by subject"/>
         <button type="submit">Search</button>
       </form>
-      {booksToDisplay === [] ? allBooks.map(book => <BookCard key = {book.id} book = {book}/>) : booksToDisplay.map(book => <BookCard key = {book.id} book = {book}/>)}
+      {booksToDisplay === [] ? allBooks.map(book => <BookCard key = {book.id} book = {book}/>) : booksToDisplay.map(book => <BookCard key = {book.id} book = {book} setAddOneBookToCart={setAddOneBookToCart}
+                  addToCart={addToCart}
+                  removeFromCart={removeFromCart}/>)}
     </div>
   );
 }

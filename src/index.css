@@ -16,15 +16,20 @@ code {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 15rem;
+  width: 13rem;
   height: 30rem;
   display: inline-grid;
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
   box-shadow: 3px 4px #e04b52;
   background-color: #FFE4C4;
 }
 
+.card button {
+  align-self: flex-end;
+}
+
 .flexbox-container {
+  text-align: center;
   flex: row
 }
 
@@ -37,6 +42,50 @@ code {
 
 }
 
+.card h4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+
 .card button {
   max-height: 30px;
+  border-radius: 10px;
+}
+
+nav {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  background-color: #e04b52;
+  padding: 1rem;
+  padding-right: 15rem;
+  padding-left: 15rem;
+  margin: 1rem 2rem;
+}
+
+nav a.active {
+  background-color: grey;
+  color: white;
+}
+
+.navlink {
+  background-color: #FFE4C4;
+  border: grey solid 1px;
+  padding: 10px;
+  font-weight:bolder;
+  font-size: larger;
+  border-radius: 10px;
+}
+
+.navlink active {
+  background-color: grey;
+
+}
+
+#lowerbanner {
+  background-image: url(http://www.loganberrybooks.com/img/about/mural%20final%20layout.jpg);
+  height: 10rem;
+  background-size:contain;
 }

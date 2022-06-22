@@ -17,7 +17,7 @@ function Rentals({
   }, [refresh]);
 
   return (
-    <div>
+    <div className="flexbox-container">
       <h1>Checked Out Books Page</h1>
       {displayCart.map((book) => {
         return (
