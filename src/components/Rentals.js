@@ -13,7 +13,7 @@ function Rentals({
   useEffect(() => {
     fetch("http://localhost:3000/books")
       .then((response) => response.json())
-      .then((data) => setDisplayCart(data.results));
+      .then((data) => setDisplayCart(data));
   }, [refresh]);
 
   return (

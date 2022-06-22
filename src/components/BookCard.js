@@ -3,7 +3,7 @@ import React from "react";
 function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
 
   function handleCheckout(e) {
-    addToCart(book.id);
+    addToCart(book);
   }
 
 
