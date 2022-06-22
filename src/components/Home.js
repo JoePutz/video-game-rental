@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import BookCard from "./BookCard";
 
-function Home({ allBooks, setAddOneBookToCart, addToCart, removeFromCart }) {
+function Home({ allBooks }) {
+
   const [shuffledBooks, setShuffledBooks] =useState([])
   const [displayedBooks, setDisplayedBooks] = useState([])
 
@@ -15,12 +16,10 @@ function Home({ allBooks, setAddOneBookToCart, addToCart, removeFromCart }) {
     setDisplayedBooks(shuffledBooks.slice(0,5))
   }, [allBooks])
 
-
   return (
     <div className="flexbox-container">
       <h1>Featured Books!</h1>
-      {displayedBooks.map((book) => <BookCard key= {book.id} book={book} addToCart={addToCart} setAddOneBookToCart={setAddOneBookToCart} removeFromCart={removeFromCart}/>)}
-
+      {displayedBooks.map((book) => <BookCard key= {book.id} book={book} />)}
     </div>
   );
 }

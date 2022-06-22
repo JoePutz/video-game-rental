@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import BookCard from "./BookCard";
 
-function Rentals({
-  allBooks,
-  setDisplayCart,
-  displayCart,
-  removeFromCart,
-  setAddOneBookToCart,
-  addToCart,
-  refresh,
-}) {
+function Rentals() {
   useEffect(() => {
-    fetch("http://localhost:3000/books")
+    fetch("http://localhost:3000/checkedOutBooks")
       .then((response) => response.json())
-      .then((data) => setDisplayCart(data));
-  }, [refresh]);
+      .then((data) => console.log(data));
+  });
 
-  console.log(displayCart, "displayCart");
+  function renderBook() {}
 
   return (
     <div>
       <h1>Checked Out Books Page</h1>
-      {displayCart.map((book) => {
-        return (
-          <BookCard
-            book={book}
-            setAddOneBookToCart={setAddOneBookToCart}
-            removeFromCart={removeFromCart}
-            addToCart={addToCart}
-          />
-        );
-      })}
     </div>
   );
 }
