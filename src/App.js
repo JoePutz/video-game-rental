@@ -19,6 +19,7 @@ function App() {
         .then(r => r.json())
         .then(booksData => {
             setAllBooks(booksData.results)})
+
             //{booksData.results.forEach(book => setAllBooks([...allBooks, book]))
         //     debugger})
         // if(booksData.next !== null){
@@ -70,6 +71,7 @@ function App() {
         //console.log(toPush)
       }
 
+  
     return (
         <div>
         <NavBar />
@@ -81,7 +83,7 @@ function App() {
                 <Rentals />
             </Route>
             <Route path="/Search">
-                <Search handleSearch = {handleSearch} />
+                <Search allBooks = {allBooks}/>
             </Route>
         </Switch>
     </div>
