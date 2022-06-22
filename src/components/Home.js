@@ -1,52 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import BookCard from "./BookCard";
 
-// function Home({ getDetails, allBooks }) {
 function Home({ allBooks, setAddOneBookToCart, addToCart, removeFromCart }) {
-  // console.log(allBooks[0])
-  const shuffledBooks = allBooks
-    .map((value) => ({ value, sort: Math.random() }))
+  const [shuffledBooks, setShuffledBooks] =useState([])
+  const [displayedBooks, setDisplayedBooks] = useState([])
+
+  useEffect(() => {
+    console.log(allBooks.map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
+    .map(({ value }) => value))
+    setShuffledBooks(allBooks.map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value))
+    setDisplayedBooks(shuffledBooks.slice(0,5))
+  }, [allBooks])
+
 
   return (
-    <div>
+    <div className="flexbox-container">
       <h1>Featured Books!</h1>
+      {displayedBooks.map((book) => <BookCard key= {book.id} book={book} addToCart={addToCart} setAddOneBookToCart={setAddOneBookToCart} removeFromCart={removeFromCart}/>)}
 
-      <BookCard
-        book={shuffledBooks[0]}
-        addToCart={addToCart}
-        setAddOneBookToCart={setAddOneBookToCart}
-        removeFromCart={removeFromCart}
-      />
-      <BookCard
-        book={shuffledBooks[1]}
-        addToCart={addToCart}
-        setAddOneBookToCart={setAddOneBookToCart}
-        removeFromCart={removeFromCart}
-      />
-      <BookCard
-        book={shuffledBooks[2]}
-        addToCart={addToCart}
-        setAddOneBookToCart={setAddOneBookToCart}
-        removeFromCart={removeFromCart}
-      />
-      <BookCard
-        book={shuffledBooks[3]}
-        addToCart={addToCart}
-        setAddOneBookToCart={setAddOneBookToCart}
-        removeFromCart={removeFromCart}
-      />
-      <BookCard
-        book={shuffledBooks[4]}
-        addToCart={addToCart}
-        setAddOneBookToCart={setAddOneBookToCart}
-        removeFromCart={removeFromCart}
-      />
-      {/* <BookCard book={allBooks[0]} /> */}
-
-      {/* going to need a formula for top 5 or 5 random or something, 
-      but for each should get <VideoGameCard game={game} getDetails={getDetails}/> */}
     </div>
   );
 }
