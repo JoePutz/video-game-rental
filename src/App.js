@@ -37,7 +37,7 @@ function App() {
                 <Rentals />
             </Route>
             <Route path="/Search">
-                <Search books = {allBooks}/>
+                <Search allBooks = {allBooks}/>
             </Route>
         </Switch>
     </div>
