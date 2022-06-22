@@ -1,53 +1,6 @@
 {
   "books": [
     {
-      "id": 55,
-      "title": "The Wonderful Wizard of Oz",
-      "authors": [
-        {
-          "name": "Baum, L. Frank (Lyman Frank)",
-          "birth_year": 1856,
-          "death_year": 1919
-        }
-      ],
-      "translators": [],
-      "subjects": [
-        "Courage -- Juvenile fiction",
-        "Cowardly Lion (Fictitious character) -- Juvenile fiction",
-        "Cyclones -- Juvenile fiction",
-        "Dreams -- Juvenile fiction",
-        "Fantasy literature",
-        "Gale, Dorothy (Fictitious character) -- Juvenile fiction",
-        "Good and evil -- Juvenile fiction",
-        "Home -- Juvenile fiction",
-        "Oz (Imaginary place) -- Juvenile fiction",
-        "Scarecrow (Fictitious character from Baum) -- Juvenile fiction",
-        "Tin Woodman (Fictitious character) -- Juvenile fiction",
-        "Toto (Fictitious character) -- Juvenile fiction",
-        "Witches -- Juvenile fiction",
-        "Wizard of Oz (Fictitious character) -- Juvenile fiction"
-      ],
-      "bookshelves": [
-        "Children's Literature",
-        "Fantasy"
-      ],
-      "languages": [
-        "en"
-      ],
-      "copyright": false,
-      "media_type": "Text",
-      "formats": {
-        "application/epub+zip": "https://www.gutenberg.org/ebooks/55.epub.images",
-        "application/rdf+xml": "https://www.gutenberg.org/ebooks/55.rdf",
-        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/55.kindle.images",
-        "text/plain; charset=utf-8": "https://www.gutenberg.org/files/55/55-0.txt",
-        "text/html; charset=utf-8": "https://www.gutenberg.org/files/55/55-h/55-h.htm",
-        "text/html": "https://www.gutenberg.org/ebooks/55.html.images",
-        "image/jpeg": "https://www.gutenberg.org/cache/epub/55/pg55.cover.small.jpg"
-      },
-      "download_count": 9227
-    },
-    {
       "id": 174,
       "title": "The Picture of Dorian Gray",
       "authors": [
@@ -88,6 +41,127 @@
         "text/plain": "https://www.gutenberg.org/ebooks/174.txt.utf-8"
       },
       "download_count": 19203
+    },
+    {
+      "id": 5200,
+      "title": "Metamorphosis",
+      "authors": [
+        {
+          "name": "Kafka, Franz",
+          "birth_year": 1883,
+          "death_year": 1924
+        }
+      ],
+      "translators": [
+        {
+          "name": "Wyllie, David (Translator)",
+          "birth_year": null,
+          "death_year": null
+        }
+      ],
+      "subjects": [
+        "Metamorphosis -- Fiction",
+        "Psychological fiction"
+      ],
+      "bookshelves": [
+        "Horror"
+      ],
+      "languages": [
+        "en"
+      ],
+      "copyright": true,
+      "media_type": "Text",
+      "formats": {
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/5200/pg5200.cover.medium.jpg",
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/5200.epub.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/5200.rdf",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/5200.kindle.images",
+        "text/html; charset=iso-8859-1": "https://www.gutenberg.org/files/5200/5200-h/5200-h.htm",
+        "text/html": "https://www.gutenberg.org/ebooks/5200.html.images",
+        "application/zip": "https://www.gutenberg.org/files/5200/5200-h.zip",
+        "text/plain; charset=utf-8": "https://www.gutenberg.org/files/5200/5200-0.zip"
+      },
+      "download_count": 11500
+    },
+    {
+      "id": 32449,
+      "title": "Japanese Girls and Women: Revised and Enlarged Edition",
+      "authors": [
+        {
+          "name": "Bacon, Alice Mabel",
+          "birth_year": 1858,
+          "death_year": 1918
+        }
+      ],
+      "translators": [],
+      "subjects": [
+        "Japan -- Social life and customs -- 1868-1912",
+        "Women -- Japan -- Social conditions",
+        "Women -- Japan -- Social life and customs"
+      ],
+      "bookshelves": [],
+      "languages": [
+        "en"
+      ],
+      "copyright": false,
+      "media_type": "Text",
+      "formats": {
+        "text/html; charset=utf-8": "https://www.gutenberg.org/files/32449/32449-h/32449-h.htm",
+        "text/plain; charset=utf-8": "https://www.gutenberg.org/files/32449/32449-0.txt",
+        "text/html": "https://www.gutenberg.org/ebooks/32449.html.images",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/32449.kindle.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/32449.rdf",
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/32449.epub.images",
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/32449/pg32449.cover.medium.jpg",
+        "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/32449/32449.txt",
+        "text/plain; charset=iso-8859-1": "https://www.gutenberg.org/files/32449/32449-8.zip",
+        "application/zip": "https://www.gutenberg.org/files/32449/32449-0.zip"
+      },
+      "download_count": 10632
+    },
+    {
+      "id": 74,
+      "title": "The Adventures of Tom Sawyer, Complete",
+      "authors": [
+        {
+          "name": "Twain, Mark",
+          "birth_year": 1835,
+          "death_year": 1910
+        }
+      ],
+      "translators": [],
+      "subjects": [
+        "Adventure stories",
+        "Bildungsromans",
+        "Boys -- Fiction",
+        "Child witnesses -- Fiction",
+        "Humorous stories",
+        "Male friendship -- Fiction",
+        "Mississippi River Valley -- Fiction",
+        "Missouri -- Fiction",
+        "Runaway children -- Fiction",
+        "Sawyer, Tom (Fictitious character) -- Fiction"
+      ],
+      "bookshelves": [
+        "Banned Books List from the American Library Association",
+        "Banned Books from Anne Haight's list"
+      ],
+      "languages": [
+        "en"
+      ],
+      "copyright": false,
+      "media_type": "Text",
+      "formats": {
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/74.epub.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/74.rdf",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/74.kindle.images",
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/74/pg74.cover.small.jpg",
+        "text/plain; charset=utf-8": "https://www.gutenberg.org/files/74/74-0.txt",
+        "text/html; charset=utf-8": "https://www.gutenberg.org/files/74/74-h.zip",
+        "application/zip": "https://www.gutenberg.org/files/74/74-0.zip",
+        "text/html": "https://www.gutenberg.org/ebooks/74.html.images"
+      },
+      "download_count": 9551
     }
   ]
 }

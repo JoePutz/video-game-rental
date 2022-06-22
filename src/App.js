@@ -25,21 +25,16 @@ function App() {
     }
 
      //add to Cart callback function
-    function addToCart(bookId) {
-      fetch(`https://gutendex.com/books/${bookId}`)
-      .then((response) => response.json())
-      .then((book) => setAddOneBookToCart(book));
-    
-
+    function addToCart(book) {
       fetch(`http://localhost:3000/books`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(addOneBookToCart),
+        body: JSON.stringify(book),
       })
         .then((response) => response.json())
-        .then((data) => setDisplayCart(data));
+        .then((data) => console.log(data));
     }
 
     // remove from cart callback function
