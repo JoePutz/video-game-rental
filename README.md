@@ -22,8 +22,23 @@ Start by running:
 
 ```
 $ npm install
+```
+
+Next, open the back-end repository, json-server-template, and in the command line, type in:
+
+```
 $ json-server --watch db.json
+
+```
+
+This should show that there is a local server being run on the port 3000.
+
+Finally, return to this repository and in the command line, type in:
+
+```
+
 $ npm start
+
 ```
 
 # Features
