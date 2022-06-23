@@ -9,9 +9,10 @@ function Rentals({
   setAddOneBookToCart,
   addToCart,
   refresh, }) {
-  const rentalLength = 30000;
+    const ashleyURL = "http://localhost:4000/books";
+    const rentalLength = 30000;
   useEffect(() => {
-    fetch("http://localhost:3000/books")
+    fetch(ashleyURL)
       .then((response) => response.json())
       .then((data) => setDisplayCart(data));
   }, [refresh]);

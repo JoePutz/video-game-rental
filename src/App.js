@@ -10,7 +10,7 @@ import LowerBanner from "./components/LowerBanner";
 
 function App() {
     const baseURL = "https://gutendex.com/books?page="
-    const ashleyURL = "http://localhost:3000/books";
+    const ashleyURL = "http://localhost:4000/books";
     const [allBooks, setAllBooks] = useState([]);
     const [addOneBookToCart, setAddOneBookToCart] = useState([]);
     const [refresh, setRefresh] = useState(true);
@@ -19,7 +19,7 @@ function App() {
       let count = 1;
       //while (count<=1){
       flipPages(`${baseURL}${count}`)
-      count++;
+      //count++;
     //}
     //setTimeout(console.log(allBooks), 5000);
   }, [])
@@ -51,8 +51,7 @@ function App() {
         method: "DELETE",
       }).then(
         fetch(ashleyURL)
-          .then((response) => response.json())
-          .then((data) => setRefresh(!refresh))
+          .then(() => setRefresh(!refresh))
       );
     }
   
