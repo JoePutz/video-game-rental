@@ -17,9 +17,10 @@ function App() {
     const [displayCart, setDisplayCart] = useState([]);
     useEffect(() => {
       let count = 1;
-      while (count<=1){flipPages(`${baseURL}${count}`)
+      //while (count<=1){
+      flipPages(`${baseURL}${count}`)
       count++;
-    }
+    //}
     //setTimeout(console.log(allBooks), 5000);
   }, [])
 
@@ -46,7 +47,6 @@ function App() {
 
     // remove from cart callback function
     function removeFromCart(bookId) {
-      //console.log("removeFromCart", bookId);
       fetch(`${ashleyURL}/${bookId}`, {
         method: "DELETE",
       }).then(
