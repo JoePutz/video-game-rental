@@ -7,7 +7,7 @@ function Home({ allBooks, setAddOneBookToCart, addToCart, removeFromCart }) {
       let shuffledBooks = allBooks.map(value => ({ value, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ value }) => value)
 
       return (
-        shuffledBooks.slice(0,5).map((book) => <BookCard key= {book.id} book={book} addToCart={addToCart} setAddOneBookToCart={setAddOneBookToCart} removeFromCart={removeFromCart} />)
+        shuffledBooks.slice(0,8).map((book) => <BookCard key= {book.id} book={book} addToCart={addToCart} setAddOneBookToCart={setAddOneBookToCart} removeFromCart={removeFromCart} />)
       )
     }
 

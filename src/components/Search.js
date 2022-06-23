@@ -111,10 +111,10 @@ function Search({allBooks, setAddOneBookToCart, addToCart, removeFromCart}) {
     <div className="flexbox-container">
       <h1>Explore Books!</h1>
       <form onSubmit={(e) => handleSearch(e,title,author,bookshelf,subject)}>
-        <input onChange = {(e) => handleTitleChange(e)} className = "title" value = {(title === "" ? "" : title)} placeholder = "Search by title"/>
-        <input onChange = {(e) => handleAuthorChange(e)} className = "author" value = {(author === "" ? "" : author)} placeholder = "Search by author"/>
-        <input onChange = {(e) => handleBookshelfChange(e)} className = "bookshelf" value = {(bookshelf === "" ? "" : bookshelf)} placeholder = "Search by genre"/>
-        <input onChange = {(e) => handleSubjectChange(e)} className = "subject" value = {(subject === "" ? "" : subject)} placeholder = "Search by subject"/>
+        <input onChange = {(e) => handleTitleChange(e)} className = "title" value = {(title === "" ? "" : title)} placeholder = "Search by Title"/>
+        <input onChange = {(e) => handleAuthorChange(e)} className = "author" value = {(author === "" ? "" : author)} placeholder = "Search by Author"/>
+        <input onChange = {(e) => handleBookshelfChange(e)} className = "bookshelf" value = {(bookshelf === "" ? "" : bookshelf)} placeholder = "Search by 'Bookshelf'"/>
+        <input onChange = {(e) => handleSubjectChange(e)} className = "subject" value = {(subject === "" ? "" : subject)} placeholder = "Search by Subject or Genre"/>
         <button type="submit">Search</button>
       </form>
       {booksToDisplay === [] ? allBooks.map(book => <BookCard key = {book.id} book = {book}/>) : booksToDisplay.map(book => <BookCard key = {book.id} book = {book} setAddOneBookToCart={setAddOneBookToCart}

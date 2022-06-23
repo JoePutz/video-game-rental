@@ -16,8 +16,9 @@ code {
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
-  width: 13rem;
-  height: 30rem;
+  width: 18rem;
+  min-height: 30rem;
+  height: auto;
   display: inline-grid;
   margin: 1rem 1rem;
   box-shadow: 3px 4px #e04b52;
