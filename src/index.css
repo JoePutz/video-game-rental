@@ -22,7 +22,7 @@ code {
   display: inline-grid;
   margin: 1rem 1rem;
   box-shadow: 3px 4px #e04b52;
-  background-color: #FFE4C4;
+  background-color: #87CEEB;
 }
 
 .card button {
@@ -33,6 +33,7 @@ code {
   text-align: center;
   flex: row;
   min-height: 40rem;
+  background-image: url(https://wallpaperaccess.com/full/3346747.jpg);
 }
 
 .card img {
@@ -60,7 +61,7 @@ nav {
   display: flex;
   flex: row;
   justify-content: space-between;
-  background-color: #e04b52;
+  background-color: red;
   padding: 1rem;
   padding-right: 15rem;
   padding-left: 15rem;
@@ -81,7 +82,7 @@ form button {
 }
 
 .navlink {
-  background-color: #FFE4C4;
+  background-color: orange;
   border: grey solid 1px;
   padding: 10px;
   font-weight:bolder;
