@@ -17,8 +17,7 @@ function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
             <h4>{book.title}</h4>
             <img src={book.formats["image/jpeg"] } />
             <p>{book.authors.map((auth) => `| ${auth.name} |`)}</p>
-            {(book.rentalTime === undefined || book.rentalTime<=0) ? <button onClick={handleCheckout}>Check-out Book</button>: null}
-            {(book.rentalTime === undefined || book.rentalTime<=0) ? null : <p>Time Left on Rental: {(rentalLength - (Date.parse(Date()) - Date.parse(book.rentalTime)))/1000}s</p>}
+            {(book.rentalTime === undefined || (rentalLength - (Date.parse(Date()) - Date.parse(book.rentalTime))) <= 0 ) ? <button onClick={handleCheckout}>Check-out Book</button> : <button>Time Left on Rental: {(rentalLength - (Date.parse(Date()) - Date.parse(book.rentalTime)))/1000}s</button>}
             <button onClick={handleCheckin}>Check-in</button>
         </div>
     )
