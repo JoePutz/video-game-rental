@@ -18,7 +18,7 @@ function Rentals({
 
   return (
     <div className="flexbox-container">
-      <h1>Checked Out Books Page</h1>
+      <h1>Your Books!</h1>
       {displayCart.map((book) => {
         if(Date.parse(Date()) - Date.parse(book.rentalTime) < rentalLength || book.rentalTime === undefined){
         return (
