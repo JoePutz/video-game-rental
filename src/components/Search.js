@@ -109,7 +109,7 @@ function Search({allBooks, setAddOneBookToCart, addToCart, removeFromCart}) {
 
   return (
     <div className="flexbox-container">
-      <h1>Search Page</h1>
+      <h1>Explore Books!</h1>
       <form onSubmit={(e) => handleSearch(e,title,author,bookshelf,subject)}>
         <input onChange = {(e) => handleTitleChange(e)} className = "title" value = {(title === "" ? "" : title)} placeholder = "Search by title"/>
         <input onChange = {(e) => handleAuthorChange(e)} className = "author" value = {(author === "" ? "" : author)} placeholder = "Search by author"/>

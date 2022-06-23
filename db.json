@@ -1,3 +1,47 @@
 {
-  "books": []
+  "books": [
+    {
+      "id": 1184,
+      "title": "The Count of Monte Cristo, Illustrated",
+      "authors": [
+        {
+          "name": "Dumas, Alexandre",
+          "birth_year": 1802,
+          "death_year": 1870
+        }
+      ],
+      "translators": [],
+      "subjects": [
+        "Adventure stories",
+        "Dantès, Edmond (Fictitious character) -- Fiction",
+        "France -- History -- 19th century -- Fiction",
+        "Historical fiction",
+        "Pirates -- Fiction",
+        "Prisoners -- Fiction",
+        "Revenge -- Fiction"
+      ],
+      "bookshelves": [
+        "Adventure",
+        "Movie Books"
+      ],
+      "languages": [
+        "en"
+      ],
+      "copyright": false,
+      "media_type": "Text",
+      "formats": {
+        "application/octet-stream": "https://www.gutenberg.org/files/1184/1184-h.zip",
+        "text/html": "https://www.gutenberg.org/files/1184/1184-h/1184-h.htm",
+        "application/zip": "https://www.gutenberg.org/files/1184/1184-0.zip",
+        "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/1184.kindle.images",
+        "application/epub+zip": "https://www.gutenberg.org/ebooks/1184.epub.images",
+        "application/rdf+xml": "https://www.gutenberg.org/ebooks/1184.rdf",
+        "text/plain; charset=us-ascii": "https://www.gutenberg.org/files/1184/1184-0.txt",
+        "image/jpeg": "https://www.gutenberg.org/cache/epub/1184/pg1184.cover.medium.jpg",
+        "text/plain": "https://www.gutenberg.org/ebooks/1184.txt.utf-8"
+      },
+      "download_count": 10167,
+      "rentalTime": "Thu Jun 23 2022 09:52:50 GMT-0500 (Central Daylight Time)"
+    }
+  ]
 }
