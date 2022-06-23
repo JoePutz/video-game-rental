@@ -9,7 +9,7 @@ function Rentals({
   setAddOneBookToCart,
   addToCart,
   refresh, }) {
-
+  const rentalLength = 30000;
   useEffect(() => {
     fetch("http://localhost:3000/books")
       .then((response) => response.json())
@@ -20,13 +20,13 @@ function Rentals({
     <div className="flexbox-container">
       <h1>Checked Out Books Page</h1>
       {displayCart.map((book) => {
-        if(Date.parse(Date()) - Date.parse(book.rentalTime) < 10000 || book.rentalTime === undefined){
+        if(Date.parse(Date()) - Date.parse(book.rentalTime) < rentalLength || book.rentalTime === undefined){
         return (
           <BookCard
             book={book}
             setAddOneBookToCart={setAddOneBookToCart}
             removeFromCart={removeFromCart}
-            //addToCart={addToCart}
+            addToCart={addToCart}
             key = {book.id}
           />
         )}

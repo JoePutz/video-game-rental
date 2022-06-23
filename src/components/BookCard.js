@@ -1,14 +1,15 @@
 import React from "react";
 
 function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
-
-  function handleCheckout(e) {
+  const rentalLength = 30000;
+  function handleCheckout() {
     addToCart(book);
+    alert(`Congrats! You've checked out ${book.title}`)
   }
 
-
-  function handleCheckin(e) {
+  function handleCheckin() {
     removeFromCart(book.id);
+    alert(`Thanks you for returning ${book.title}! What book will you jump into next?`)
   }
 
     return (
@@ -16,8 +17,8 @@ function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
             <h4>{book.title}</h4>
             <img src={book.formats["image/jpeg"] } />
             <p>{book.authors.map((auth) => `| ${auth.name} |`)}</p>
-            <button onClick={handleCheckout}>Check-out Book</button>
-            {(book.rentalTime === undefined) ? null : <p>Time Left on Rental: {(10000 - (Date.parse(Date()) - Date.parse(book.rentalTime)))/1000}s</p>}
+            {(book.rentalTime === undefined || book.rentalTime<=0) ? <button onClick={handleCheckout}>Check-out Book</button>: null}
+            {(book.rentalTime === undefined || book.rentalTime<=0) ? null : <p>Time Left on Rental: {(rentalLength - (Date.parse(Date()) - Date.parse(book.rentalTime)))/1000}s</p>}
             <button onClick={handleCheckin}>Check-in</button>
         </div>
     )

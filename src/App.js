@@ -17,7 +17,7 @@ function App() {
     const [displayCart, setDisplayCart] = useState([]);
     useEffect(() => {
       let count = 1;
-      while (count<=50){flipPages(`${baseURL}${count}`)
+      while (count<=1){flipPages(`${baseURL}${count}`)
       count++;
     }
     //setTimeout(console.log(allBooks), 5000);
