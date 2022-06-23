@@ -30,7 +30,8 @@ code {
 
 .flexbox-container {
   text-align: center;
-  flex: row
+  flex: row;
+  min-height: 40rem;
 }
 
 .card img {
@@ -68,6 +69,14 @@ nav {
 nav a.active {
   background-color: grey;
   color: white;
+}
+
+input {
+  font-size: 125%;
+}
+
+form button {
+  font-size: 125%
 }
 
 .navlink {
