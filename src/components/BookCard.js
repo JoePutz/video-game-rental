@@ -5,6 +5,7 @@ function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
 
   const [rentalRemaining, setRentalRemaining] = useState(book.rentalTime);
   useEffect(() => {
+  if(rentalRemaining===0) handleCheckin()
   setInterval(()=> {
   setRentalRemaining((rentalLength - (Date.parse(Date()) - Date.parse(book.rentalTime)))/1000)}, 1000)
   }, [rentalRemaining])
