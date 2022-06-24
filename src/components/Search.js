@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import BookCard from "./BookCard";
 
-function Search({allBooks, setAddOneBookToCart, addToCart, removeFromCart}) {
+function Search({allBooks, addToCart, removeFromCart}) {
   
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
