@@ -6,7 +6,6 @@ function Rentals({
   setDisplayCart,
   displayCart,
   removeFromCart,
-  setAddOneBookToCart,
   addToCart,
   refresh, }) {
     const ashleyURL = "http://localhost:4000/books";
@@ -25,7 +24,6 @@ function Rentals({
         return (
           <BookCard
             book={book}
-            setAddOneBookToCart={setAddOneBookToCart}
             removeFromCart={removeFromCart}
             addToCart={addToCart}
             key = {book.id}

@@ -3,7 +3,7 @@ import Details from "./Details.js"
 import Bookshelf from "./Bookshelf.js";
 import Authors from "./Authors.js";
 
-function BookCard({ book, addToCart, setAddOneBookToCart, removeFromCart  }) {
+function BookCard({ book, addToCart, removeFromCart  }) {
   const rentalLength = 31000;
   const [displayDetails, setDisplayDetails] = useState(false);
 

@@ -117,7 +117,7 @@ function Search({allBooks, setAddOneBookToCart, addToCart, removeFromCart}) {
         <input onChange = {(e) => handleSubjectChange(e)} className = "subject" value = {(subject === "" ? "" : subject)} placeholder = "Search by Subject or Genre"/>
         <button type="submit">Search</button>
       </form>
-      {booksToDisplay === [] ? allBooks.map(book => <BookCard key = {book.id} book = {book}/>) : booksToDisplay.map(book => <BookCard key = {book.id} book = {book} setAddOneBookToCart={setAddOneBookToCart}
+      {booksToDisplay === [] ? allBooks.map(book => <BookCard key = {book.id} book = {book}/>) : booksToDisplay.map(book => <BookCard key = {book.id} book = {book}
                   addToCart={addToCart}
                   removeFromCart={removeFromCart}/>)}
     </div>
