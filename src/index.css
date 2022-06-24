@@ -30,6 +30,7 @@ code {
 }
 
 .flexbox-container {
+  color: white;
   text-align: center;
   flex: row;
   min-height: 40rem;
