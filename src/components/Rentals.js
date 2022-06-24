@@ -8,7 +8,7 @@ function Rentals({
   removeFromCart,
   addToCart,
   refresh, }) {
-    const ashleyURL = "http://localhost:4000/books";
+    const ashleyURL = "https://tranquil-plains-77311.herokuapp.com/books";
     const rentalLength = 30000;
   useEffect(() => {
     fetch(ashleyURL)

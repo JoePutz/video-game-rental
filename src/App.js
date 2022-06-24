@@ -9,7 +9,7 @@ import LowerBanner from "./components/LowerBanner";
 
 function App() {
     const baseURL = "https://gutendex.com/books?page="
-    const ashleyURL = "http://localhost:4000/books";
+    const ashleyURL = "https://tranquil-plains-77311.herokuapp.com/books";
     const [allBooks, setAllBooks] = useState([]);
     const [refresh, setRefresh] = useState(true);
     const [displayCart, setDisplayCart] = useState([]);
