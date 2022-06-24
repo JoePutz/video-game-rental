@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
@@ -12,7 +11,6 @@ function App() {
     const baseURL = "https://gutendex.com/books?page="
     const ashleyURL = "http://localhost:4000/books";
     const [allBooks, setAllBooks] = useState([]);
-    const [addOneBookToCart, setAddOneBookToCart] = useState([]);
     const [refresh, setRefresh] = useState(true);
     const [displayCart, setDisplayCart] = useState([]);
     useEffect(() => {
@@ -62,13 +60,11 @@ function App() {
             <Route exact path="/">
                 <Home 
                   allBooks={allBooks}
-                  setAddOneBookToCart={setAddOneBookToCart}
                   addToCart={addToCart}
                   removeFromCart={removeFromCart} />
             </Route>
             <Route path="/rentals">
                 <Rentals 
-                  setAddOneBookToCart={setAddOneBookToCart}
                   addToCart={addToCart}
                   setDisplayCart={setDisplayCart}
                   displayCart={displayCart}
@@ -78,7 +74,6 @@ function App() {
             </Route>
             <Route path="/Search">
                 <Search allBooks = {allBooks}
-                setAddOneBookToCart={setAddOneBookToCart}
                 addToCart={addToCart}
                 removeFromCart={removeFromCart}
                 />
