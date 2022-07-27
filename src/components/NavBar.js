@@ -6,10 +6,10 @@ function NavBar() {
   return (
     <nav>
       <NavLink className="navlink" exact to="/">
-        User Bio
+        Home
       </NavLink>
-      <NavLink className="navlink" to="/swiper">Swipe</NavLink>
-      <NavLink className="navlink" to="/matches">Matches</NavLink>
+      <NavLink className="navlink" to="/rentals">Checked Out Books</NavLink>
+      <NavLink className="navlink" to="/search">Search</NavLink>
     </nav>
   );
 }
